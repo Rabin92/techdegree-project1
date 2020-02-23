@@ -158,6 +158,8 @@ img.flag-gb{
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1em;
 }
 .card:hover {
   border-color: #161516;
@@ -186,6 +188,8 @@ img.flag-gb{
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1em;
 }
 .card-education:hover {
   border-color: #161516;
@@ -200,6 +204,8 @@ img.flag-gb{
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1em;
 }
 .card-creation:hover {
   border-color: #161516;
@@ -265,6 +271,11 @@ button:hover{
 .text-deco{
   color: rgb(70, 44, 112);
   font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+p.comp-style{
+  padding-left: 40px;
 }
 
 ul.skills {
