@@ -338,6 +338,10 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
+
+  .wrap {
+    min-height: calc(100vh - 130.34px);
+  }
   
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -368,7 +372,7 @@ a.social:hover {
 
   footer {
     font-size: 1.3em;
-    margin: 40px auto;
+    margin-top: 40px;
   }
 
 }
