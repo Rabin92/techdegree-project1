@@ -11,7 +11,7 @@
       font-family: 'Roboto', sans-serif;
       color: #222;
       background: #f7f5f0;
-      font-size: 1em;
+      font-size: 1.1em;
     }
 
     img {
@@ -25,7 +25,7 @@
       color: rgb(202, 107, 63);
     }
     a:hover {
-      color: #6633ff;
+      color: rgb(179, 22, 22);
     }
 
 /* Header-Style Content */
@@ -39,14 +39,8 @@
       border-bottom: 2px solid white;
     }
     
-    .profile-name,
     .nav {
-      text-align: center;
       padding-left: 0;
-      font-size: 1.125rem;
-    }
-
-    .nav {
       font-weight: 700;
       list-style-type: none;
     }
@@ -72,10 +66,6 @@
 
     .nav a {
       transition: all .5s;
-    }
-
-    .nav a:hover {
-      color: rgb(65, 140, 211);
     }
 
     .line{
@@ -154,7 +144,7 @@
 
 /* Content Section */
 
-    .objectives{
+    .objectives {
       width: 120px;
       height: 120px;
       float: right;
@@ -167,7 +157,8 @@
     }
 
     .card {
-      margin-top: 20px;
+      margin: 20px auto;
+      margin-bottom: 0;
       padding: 20px 40px 40px;
       max-width: 500px;
       text-align: left;
@@ -175,8 +166,6 @@
       border-bottom: 4px solid #ccc;
       border-radius: 6px;
       transition: all .5s;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 1.1em;
     }
 
     .card:hover {
@@ -184,7 +173,8 @@
     }
 
     .card-contact {
-      margin-top: 20px;
+      margin: 20px auto;
+      margin-bottom: 0;
       padding: 20px 40px 40px;
       max-width: 500px;
       text-align: left;
@@ -199,7 +189,8 @@
     }
 
     .card-education {
-      margin-top: 20px;
+      margin: 20px auto;
+      margin-bottom: 0;
       padding: 20px 40px 40px;
       max-width: 500px;
       text-align: left;
@@ -224,8 +215,6 @@
       border-bottom: 4px solid #ccc;
       border-radius: 6px;
       transition: all .5s;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 1.1em;
     }
 
     .card-creation:hover {
@@ -346,7 +335,7 @@
       transition: all .5s;
     }
 
-    footer  ul li {
+    footer ul li {
       background: none;
     }
   
@@ -367,17 +356,13 @@
 @media screen and (min-width: 768px) {
 
       .header-content {
-        width: 100%;
-        background: rgb(7, 11, 61);
         min-height: 30px;
         padding: 10px;
         position: fixed;
-        top: 0;
-        border-bottom: 2px solid white;
       }
 
       .wrap {
-        min-height: calc(100vh - 130.34px);
+        min-height: calc(100vh - 18px);
       }
       
       .flex {
@@ -422,10 +407,6 @@
       transition: all .5s;
     }
 
-    .nav a:hover {
-      color: rgb(65, 140, 211);
-    }
-
     .line{
       padding-left: 0.50em;
       color: yellow;
@@ -454,23 +435,17 @@
 
         .nav {
           display: flex;
-          /* justify-content: space-around; */
           list-style-type: none;
-          margin: 0 auto;
           max-width: 1200px;
           padding: 0 30px;
         }
 
-        nav {
-          padding-bottom: 40px;
-        }
-
         .profile-name {
             float: left;
+            padding-left: 1rem;
         }
 
-        .nav,
-        .profile-nav {
+        .nav {
           margin-top: 0.5rem;
         }
 
