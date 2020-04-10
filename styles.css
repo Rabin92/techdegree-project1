@@ -1,4 +1,4 @@
-/* Global Layout Set-up */
+/* ************************** GLOBAL LAYOUT SET-UP ************************** */
 
     * { 
       box-sizing: border-box;
@@ -72,7 +72,7 @@
       display: none;
     }
 
-/* Header Section */
+/* ***************************** HEADER SECTION ***************************** */
 
     header {
       text-align: center;
@@ -142,7 +142,7 @@
       height: 20px;
     }
 
-/* Content Section */
+/* ***************************** CONTENT SECTION **************************** */
 
     .objectives {
       width: 120px;
@@ -225,7 +225,7 @@
       text-align: center;
     }
 
-    /* Form Section */
+/* ****************************** FORM SECTION ****************************** */
 
     form {
       max-width: 300px;
@@ -299,7 +299,7 @@
       background: #0399ff;
     }
 
-/* Footer Section */
+/* ***************************** FOOTER SECTION ***************************** */
 
     footer {
       width: 100%;
@@ -352,7 +352,7 @@
     }
 
     
-/* Styles for larger screens */
+/* ********************* MEDIA QUERY FOR SMALLER SCREEN ********************* */
 
 @media screen and (min-width: 768px) {
 
@@ -425,6 +425,8 @@
       width: 50%;
     }
 }
+
+/* ********************** MEDIA QUERY FOR LARGER SCREEN ********************* */
 
 @media (min-width: 1024px) {
 
