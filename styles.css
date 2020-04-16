@@ -18,6 +18,59 @@
       max-width: 100%;
     }
 
+    /* flex */
+
+    fieldset {
+      border: none;
+    }
+
+    .flex-container,
+    .flex-items,
+    .flex-button {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-items input {
+      margin-bottom: 15px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+
+    .flex-items textarea {
+      border: 1px solid black;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+
+    input:hover,
+    textarea:hover {
+      background-color: beige;
+    }
+
+
+    input[type="submit"] {
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+      background-color: dodgerblue;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      background-color: darkblue;
+    }
+
+    input[type="submit"] {
+      -webkit-appearance: none; 
+      appearance: none;
+    }
+
 /* Link Styles */
 
     a {
@@ -175,7 +228,8 @@
     .card-contact {
       margin: 20px auto;
       margin-bottom: 0;
-      padding: 20px 40px 40px;
+      padding: 0 0 20px 0;
+      width: 90%;
       max-width: 500px;
       text-align: left;
       background: #fff;
@@ -226,50 +280,6 @@
     }
 
 /* ****************************** FORM SECTION ****************************** */
-
-    form {
-      max-width: 300px;
-      margin: 5px auto;
-      padding: 10px;
-      background: #ffff;
-      border-radius: 8px;
-    }
-
-    label {
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    select {
-      background-color: rgb(226, 226, 226);
-      font-size: 16px;
-      padding-right: 20px;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-
-    button {
-      padding: 19px 39px 18px 39px;
-      font-weight: bold;
-      color: #FFF;
-      background-color: #52be73;
-      font-size: 20px;
-      text-align: center;
-      font-style: normal;
-      border-radius: 40px;
-      width: 100%;
-      border: 1px solid #449624;
-      border-width: 1px 1px 3px 3px;
-      margin-bottom: 10px;
-    }
-
-    button:hover {
-      color: rgb(62, 99, 7);
-      cursor: pointer;
-    }
 
     .text-deco {
       color: rgb(70, 44, 112);
@@ -423,6 +433,39 @@
     .homepage,
     .events {
       width: 50%;
+    }
+
+    /* flex */
+
+    .flex-container,
+    .flex-items,
+    .flex-button {
+      flex-direction: row;
+    }
+
+    .flex-items input {
+      flex: 1;
+      margin-bottom: 15px;
+      height: 30px;
+      border: 1px solid black;
+    }
+
+    .flex-items textarea {
+      flex: 1;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .flex-items label {
+      flex-basis: 30%;
+    }
+
+    input[type="submit"] {
+      width: 70%;
+    }
+
+    .flex-button {
+      justify-content: flex-end;
     }
 }
 
