@@ -51,7 +51,6 @@
       background-color: beige;
     }
 
-
     input[type="submit"] {
       padding: 10px;
       border-radius: 10px;
@@ -60,27 +59,25 @@
       color: #fff;
       font-size: 1.2rem;
       cursor: pointer;
+      transition: background-color .3s cubic-bezier(.39,-0.44,.46,1.53) 0s;
+      /* transition: <transition-property><duration><cubic-bezier><delay> */
+      -webkit-appearance: none; 
+      appearance: none;
     }
 
     #submit:hover {
       background-color: darkblue;
-    }
-
-    input[type="submit"] {
-      -webkit-appearance: none; 
-      appearance: none;
+      transform: translateY(2px);
     }
 
 /* Link Styles */
 
     a {
+      text-transform: uppercase;
       text-decoration: none;
-      color: rgb(202, 107, 63);
+      color: rgb(214, 153, 74);
     }
-    a:hover {
-      color: rgb(179, 22, 22);
-    }
-
+   
 /* Header-Style Content */
 
     .header-content {
@@ -99,8 +96,9 @@
     }
 
     .profile-name {
-      padding-top: 10px;
       color: white;
+      font-family: 'Merienda One', cursive;
+      text-shadow:  1px 1px 2px rgb(107, 109, 102);
     }
 
     h3.profile-name {
@@ -109,9 +107,15 @@
 
    nav ul li {
       margin: 10px;
-      padding: 5px;
+      padding: 10px;
       background: #fff;
+      transition: background .5s cubic-bezier(.39,-0.44,.46,1.53);
+      /* transition: <transition-property><cubic-bezier> */
     }
+
+  nav ul li:hover {
+    background: rgb(99, 84, 81);
+  }
 
     li a {
       display: block;
@@ -119,10 +123,6 @@
 
     .nav a {
       transition: all .5s;
-    }
-
-    .line{
-      display: none;
     }
 
 /* ***************************** HEADER SECTION ***************************** */
@@ -163,12 +163,14 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 5px outset #161516;
-      transition: all 1s;
+      border: 5px outset #fff;
+      transition: all .5s, border-radius .5s .10s;
+      /* transition: <all duration delay> */
     }
 
     header .profile-image:hover {
-      transform: scale(1.1) rotate(5deg);
+      transform: scale(1.1) rotate(360deg);
+      border-radius: 20px;
     }
 
     .tag {
@@ -207,6 +209,11 @@
       width: 120px;
       height: 120px;
       float: left;
+    }
+
+    .goals:hover,
+    .objectives:hover {
+      transform: scale(1.2);
     }
 
     .card {
@@ -346,22 +353,19 @@
       transition: all .5s;
     }
 
-    footer ul li {
-      background: none;
-    }
-  
     a.github {
       margin-bottom: 0.3125em;
       background-image: url(images/github.svg);
+      transition: opacity .4s, transform .4s;
     }
     a.social:hover {
       opacity: .8;
+      transform: scale(1.2) rotate(360deg);
     }
     .clearfix {
       clear: both;
     }
 
-    
 /* ********************* MEDIA QUERY FOR SMALLER SCREEN ********************* */
 
 @media screen and (min-width: 768px) {
@@ -372,9 +376,22 @@
         position: fixed;
       }
 
+      .nav a{
+        margin-left: 1.5em;
+        transition: color .5s 0s, transform .5s .2s;
+      }
+
+      nav ul li:hover,
+      a:hover {
+        background: none;
+        color: #fff;
+        transform: scale(1.1);
+      }
+
       .wrap {
         min-height: calc(100vh - 18px);
       }
+      /* Sticky footer syntax */
       
       .flex {
           display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -412,16 +429,6 @@
       background: none;
       padding: 0;
       margin: 0;
-    }
-
-    .nav a {
-      transition: all .5s;
-    }
-
-    .line{
-      padding-left: 0.50em;
-      color: yellow;
-      display: initial;
     }
 
     .col {
@@ -481,9 +488,14 @@
 
         .nav {
           display: flex;
-          list-style-type: none;
           max-width: 1200px;
           padding: 0 30px;
+        }
+
+        nav a{
+          margin-left: 3em;
+          transition: color 10s 0s, border .5s 2s;
+          transform: rotate(-10deg);
         }
 
         .profile-name {
@@ -497,13 +509,6 @@
 
         nav ul  {
           float: right;
-        }
-
-        .line{
-          padding-left: 1em;
-          padding-right: 1em;
-          color: yellow;
-          display: initial;
         }
 }
 
