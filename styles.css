@@ -1,17 +1,21 @@
 /* ************************** GLOBAL LAYOUT SET-UP ************************** */
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+
   margin: 0;
   padding: 0;
+
   text-align: center;
-  font-family: "Roboto", sans-serif;
+
   color: #222;
   background: #f7f5f0;
-  font-size: 1.1em;
 }
 
 img {
@@ -27,23 +31,30 @@ fieldset {
 .flex-container,
 .flex-items,
 .flex-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .flex-items input {
-  margin-bottom: 15px;
   height: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+
   border: 1px solid black;
   border-radius: 10px;
-  padding-left: 10px;
 }
 
 .flex-items textarea {
-  border: 1px solid black;
   margin-bottom: 10px;
-  border-radius: 10px;
   padding-left: 10px;
+
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 input:hover,
@@ -52,52 +63,69 @@ textarea:hover {
 }
 
 input[type="submit"] {
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%;
-  background-color: dodgerblue;
-  color: #fff;
   font-size: 1.2rem;
+
+  width: 100%;
+  padding: 10px;
+
   cursor: pointer;
+  -webkit-transition: background-color 0.3s
+    cubic-bezier(0.39, -0.44, 0.46, 1.53) 0s;
+  -o-transition: background-color 0.3s cubic-bezier(0.39, -0.44, 0.46, 1.53) 0s;
   transition: background-color 0.3s cubic-bezier(0.39, -0.44, 0.46, 1.53) 0s;
+
+  color: #fff;
+  border-radius: 10px;
+  background-color: dodgerblue;
   /* transition: <transition-property><duration><cubic-bezier><delay> */
+
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
 #submit:hover {
-  background-color: darkblue;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
+
+  background-color: darkblue;
 }
 
 /* Link Styles */
 
 a {
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
+
   color: rgb(214, 153, 74);
 }
 
 /* Header-Style Content */
 
 .header-content {
+  top: 0;
+
   width: 100%;
-  background: rgb(7, 11, 61);
   min-height: 30px;
   padding: 10px;
-  top: 0;
+
   border-bottom: 2px solid white;
+  background: rgb(7, 11, 61);
 }
 
 .nav {
-  padding-left: 0;
   font-weight: 700;
+
+  padding-left: 0;
+
   list-style-type: none;
 }
 
 .profile-name {
-  color: white;
   font-family: "Merienda One", cursive;
+
+  color: white;
   text-shadow: 1px 1px 2px rgb(107, 109, 102);
 }
 
@@ -108,8 +136,14 @@ h3.profile-name {
 nav ul li {
   margin: 10px;
   padding: 10px;
-  background: #fff;
+
+  -webkit-transition: background 0.5s cubic-bezier(0.39, -0.44, 0.46, 1.53);
+
+  -o-transition: background 0.5s cubic-bezier(0.39, -0.44, 0.46, 1.53);
+
   transition: background 0.5s cubic-bezier(0.39, -0.44, 0.46, 1.53);
+
+  background: #fff;
   /* transition: <transition-property><cubic-bezier> */
 }
 
@@ -122,110 +156,143 @@ li a {
 }
 
 .nav a {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 /* ***************************** HEADER SECTION ***************************** */
 
 header {
+  line-height: 1.5;
+
+  overflow: hidden;
+
+  padding-top: 50px;
+
   text-align: center;
+
+  border-bottom: 2px inset brown;
   background: url("images/np-mountain.jpg") no-repeat top center;
   background-size: cover;
-  overflow: hidden;
-  padding-top: 50px;
-  border-bottom: 2px inset brown;
-  line-height: 1.5;
 }
 
 header.np-house {
+  overflow: hidden;
+
+  padding-top: 50px;
+
   background: url("images/house-npl.jpg") no-repeat top center;
   background-size: cover;
-  overflow: hidden;
-  padding-top: 50px;
 }
 
 header.np-mt {
+  overflow: hidden;
+
+  padding-top: 50px;
+
   background: url("images/np-mt.jpg") no-repeat top center;
   background-size: cover;
-  overflow: hidden;
-  padding-top: 50px;
 }
 
 header.np-rural {
+  overflow: hidden;
+
+  padding-top: 50px;
+
   background: url("images/np-rural.jpg") no-repeat top center;
   background-size: cover;
-  overflow: hidden;
-  padding-top: 50px;
 }
 
 header .profile-image {
-  margin-top: 20px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 5px outset #fff;
+  margin-top: 20px;
+
+  -webkit-transition: all 0.5s, border-radius 0.5s 0.1s;
+
+  -o-transition: all 0.5s, border-radius 0.5s 0.1s;
+
   transition: all 0.5s, border-radius 0.5s 0.1s;
+
+  border: 5px outset #fff;
+  border-radius: 50%;
   /* transition: <all duration delay> */
 }
 
 header .profile-image:hover {
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
   transform: scale(1.1) rotate(360deg);
+
   border-radius: 20px;
 }
 
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
   display: table;
+
   margin: 30px auto;
+  padding: 10px;
+
+  color: black;
+  border-radius: 5px;
+  background-color: #efefef;
 }
 .location {
-  background-color: black;
   color: white;
+  background-color: black;
 }
 
 img.flag-np {
-  padding-top: 2px;
   width: 25px;
   height: 20px;
+  padding-top: 2px;
 }
 img.flag-gb {
-  padding-top: 8px;
   width: 25px;
   height: 20px;
+  padding-top: 8px;
 }
 
 /* ***************************** CONTENT SECTION **************************** */
 
 .objectives {
+  float: right;
+
   width: 120px;
   height: 120px;
-  float: right;
 }
 
 .goals {
+  float: left;
+
   width: 120px;
   height: 120px;
-  float: left;
 }
 
 .goals:hover,
 .objectives:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .card {
+  max-width: 500px;
   margin: 20px auto;
   margin-bottom: 0;
   padding: 20px 40px 40px;
-  max-width: 500px;
+
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
+  transition: all 0.5s;
   text-align: left;
-  background: #fff;
+
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all 0.5s;
+  background: #fff;
 }
 
 .card:hover {
@@ -233,16 +300,22 @@ img.flag-gb {
 }
 
 .card-contact {
+  width: 90%;
+  max-width: 500px;
   margin: 20px auto;
   margin-bottom: 0;
   padding: 0 0 20px 0;
-  width: 90%;
-  max-width: 500px;
+
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
+  transition: all 0.5s;
   text-align: left;
-  background: #fff;
+
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all 0.5s;
+  background: #fff;
 }
 
 .card-contact:hover {
@@ -250,17 +323,24 @@ img.flag-gb {
 }
 
 .card-education {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1em;
+
+  max-width: 500px;
   margin: 20px auto;
   margin-bottom: 0;
   padding: 20px 40px 40px;
-  max-width: 500px;
+
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
+  transition: all 0.5s;
   text-align: left;
-  background: #fff;
+
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all 0.5s;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.1em;
+  background: #fff;
 }
 
 .card-education:hover {
@@ -268,14 +348,21 @@ img.flag-gb {
 }
 
 .card-creation {
+  overflow: auto;
+
   margin-top: 20px;
   padding: 20px 40px 40px;
-  overflow: auto;
+
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
+  transition: all 0.5s;
   text-align: left;
-  background: #fff;
+
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all 0.5s;
+  background: #fff;
 }
 
 .card-creation:hover {
@@ -289,9 +376,10 @@ img.flag-gb {
 /* ****************************** FORM SECTION ****************************** */
 
 .text-deco {
-  color: rgb(70, 44, 112);
-  font-size: 25px;
   font-family: "Roboto", sans-serif;
+  font-size: 25px;
+
+  color: rgb(70, 44, 112);
 }
 
 p.comp-style {
@@ -300,16 +388,19 @@ p.comp-style {
 
 ul.skills {
   padding: 0;
+
   text-align: left;
 }
 
 .skills li {
-  border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
-  padding: 5px 10px;
+
   margin: 2px;
+  padding: 5px 10px;
+
+  color: white;
+  border-radius: 6px;
+  background: #ff9904;
 }
 
 .skills li:nth-child(odd) {
@@ -321,22 +412,26 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
-  background: rgb(7, 11, 61);
-  color: #ffff;
-  padding: 1.25em 0 0.625em 0;
   margin-top: 30px;
+  padding: 1.25em 0 0.625em 0;
+
+  color: #ffff;
+  background: rgb(7, 11, 61);
 }
 
 footer .copyright {
-  top: -8px;
   font-size: 0.95rem;
+
+  top: -8px;
+
   color: #fff;
 }
 
 footer ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 footer ul li {
@@ -345,22 +440,42 @@ footer ul li {
 
 a.social {
   display: inline-block;
-  text-indent: -9999px;
+
   width: 30px;
   height: 30px;
-  background-size: 30px 30px;
-  opacity: 0.5;
+
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
   transition: all 0.5s;
+  text-indent: -9999px;
+
+  opacity: 0.5;
+  background-size: 30px 30px;
 }
 
 a.github {
   margin-bottom: 0.3125em;
-  background-image: url(images/github.svg);
+
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+
+  transition: opacity 0.4s, -webkit-transform 0.4s;
+
+  -o-transition: opacity 0.4s, transform 0.4s;
+
   transition: opacity 0.4s, transform 0.4s;
+
+  transition: opacity 0.4s, transform 0.4s, -webkit-transform 0.4s;
+
+  background-image: url(images/github.svg);
 }
 a.social:hover {
-  opacity: 0.8;
+  -webkit-transform: scale(1.2) rotate(360deg);
+  -ms-transform: scale(1.2) rotate(360deg);
   transform: scale(1.2) rotate(360deg);
+
+  opacity: 0.8;
 }
 .clearfix {
   clear: both;
@@ -370,21 +485,34 @@ a.social:hover {
 
 @media screen and (min-width: 768px) {
   .header-content {
+    position: fixed;
+
     min-height: 30px;
     padding: 10px;
-    position: fixed;
   }
 
   .nav a {
     margin-left: 1.5em;
+
+    -webkit-transition: color 0.5s 0s, -webkit-transform 0.5s 0.2s;
+
+    transition: color 0.5s 0s, -webkit-transform 0.5s 0.2s;
+
+    -o-transition: color 0.5s 0s, transform 0.5s 0.2s;
+
     transition: color 0.5s 0s, transform 0.5s 0.2s;
+
+    transition: color 0.5s 0s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
   }
 
   nav ul li:hover,
   a:hover {
-    background: none;
-    color: #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
+
+    color: #fff;
+    background: none;
   }
 
   .wrap {
@@ -394,11 +522,14 @@ a.social:hover {
 
   .flex {
     display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-box;
     display: flex;
+
     max-width: 1200px;
+    margin: 0 auto;
+
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin: 0 auto;
   }
 
   header {
@@ -425,13 +556,16 @@ a.social:hover {
 
   nav ul li {
     display: inline-block;
-    background: none;
-    padding: 0;
+
     margin: 0;
+    padding: 0;
+
+    background: none;
   }
 
   .col {
     float: left;
+
     padding-right: 1em;
     padding-left: 1em;
   }
@@ -446,23 +580,39 @@ a.social:hover {
   .flex-container,
   .flex-items,
   .flex-button {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 
   .flex-items input {
-    flex: 1;
-    margin-bottom: 15px;
     height: 30px;
+    margin-bottom: 15px;
+
     border: 1px solid black;
+
+    -webkit-box-flex: 1;
+
+    -ms-flex: 1;
+
+    flex: 1;
   }
 
   .flex-items textarea {
-    flex: 1;
-    border: 1px solid black;
     margin-bottom: 10px;
+
+    border: 1px solid black;
+
+    -webkit-box-flex: 1;
+
+    -ms-flex: 1;
+
+    flex: 1;
   }
 
   .flex-items label {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
   }
 
@@ -471,6 +621,8 @@ a.social:hover {
   }
 
   .flex-button {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
@@ -485,19 +637,30 @@ a.social:hover {
   }
 
   .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
     max-width: 1200px;
     padding: 0 30px;
   }
 
   nav a {
     margin-left: 3em;
+
+    -webkit-transition: color 10s 0s, border 0.5s 2s;
+
+    -o-transition: color 10s 0s, border 0.5s 2s;
+
     transition: color 10s 0s, border 0.5s 2s;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
 
   .profile-name {
     float: left;
+
     padding-left: 1rem;
   }
 
